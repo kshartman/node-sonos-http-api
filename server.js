@@ -47,6 +47,7 @@ var requestHandler = function (req, res) {
       }
 
       if (req.method === 'GET') {
+        console.log(req.url);
         api.requestHandler(req, res);
       }
     });
