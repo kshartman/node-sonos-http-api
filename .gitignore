@@ -1,6 +1,7 @@
 node_modules
 presets.json
 presets/
+presets
 cache
 settings.json
 static/tts
