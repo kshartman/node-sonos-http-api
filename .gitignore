@@ -14,6 +14,10 @@ obj/
 *.crt
 *.pfx
 *.key
+*\#
+.*\#
+\#*
+.\#*
 
 # VS
 .vscode
@@ -23,9 +27,3 @@ obj/
 .DS_Store
 yarn.lock
 npm-debug.log
-
-*\~
-\.*\~
-*\#
-\#*
-\.\#*
