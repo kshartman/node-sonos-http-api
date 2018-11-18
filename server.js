@@ -48,6 +48,7 @@ var requestHandler = function (req, res) {
       }
 
       if (req.method === 'GET') {
+        console.log(req.url);
         api.requestHandler(req, res);
       }
     });
@@ -64,6 +65,9 @@ if (settings.https) {
   } else if (settings.https.key && settings.https.cert) {
     options.key = fs.readFileSync(settings.https.key);
     options.cert = fs.readFileSync(settings.https.cert);
+    if (settings.https.ca) {
+       options.ca = fs.readFileSync(settings.https.ca);
+    }
   } else {
     logger.error("Insufficient configuration for https");
     return;
