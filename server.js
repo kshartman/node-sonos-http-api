@@ -17,7 +17,7 @@ var requestHandler = function (req, res) {
   req.addListener('end', function () {
     fileServer.serve(req, res, function (err) {
 
-	console.log("url - " + req.url);
+	  logger.debug("request url - " + req.url);
       // If error, route it.
       // This bypasses authentication on static files!
       if (!err) {
@@ -48,7 +48,6 @@ var requestHandler = function (req, res) {
       }
 
       if (req.method === 'GET') {
-        console.log(req.url);
         api.requestHandler(req, res);
       }
     });
