@@ -17,7 +17,7 @@ var requestHandler = function (req, res) {
   req.addListener('end', function () {
     fileServer.serve(req, res, function (err) {
 
-	  logger.debug("request url - " + req.url);
+      if (settings.debug) console.log("request url - " + req.url);
       // If error, route it.
       // This bypasses authentication on static files!
       if (!err) {
@@ -31,8 +31,10 @@ var requestHandler = function (req, res) {
           res.statusCode = 401;
           res.setHeader('WWW-Authenticate', 'Basic realm="Access Denied"');
           res.end('Access denied');
+          if (settings.debug) console.log("not authorized");
           return;
         }
+        if (settings.debug) console.log("authorized");
       }
 
       // Enable CORS requests
