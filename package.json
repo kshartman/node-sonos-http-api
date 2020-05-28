@@ -1,6 +1,6 @@
 {
   "name": "sonos-http-api",
-  "version": "1.6.5",
+  "version": "1.6.9",
   "description": "A simple node app for controlling a Sonos system with basic HTTP requests",
   "scripts": {
     "start": "node server.js",
@@ -12,7 +12,6 @@
     "url": "https://github.com/jishi/node-sonos-http-api.git"
   },
   "dependencies": {
-    "ajv": "^5.5.2",
     "anesidora": "^1.2.0",
     "aws-sdk": "^2.12.0",
     "basic-auth": "~1.1.0",
@@ -20,10 +19,10 @@
     "html-entities": "^1.2.1",
     "json5": "^0.5.1",
     "mime": "^1.4.1",
-    "music-metadata": "^3.1.5",
+    "music-metadata": "^1.1.0",
     "node-static": "^0.7.9",
-    "request-promise": "^4.2.5",
-    "sonos-discovery": "https://github.com/jishi/node-sonos-discovery/archive/v1.7.2.tar.gz",
+    "request-promise": "~1.0.2",
+    "sonos-discovery": "https://github.com/jishi/node-sonos-discovery/archive/v1.7.3.tar.gz",
     "wav-file-info": "0.0.8"
   },
   "engines": {
