@@ -73,7 +73,6 @@ if (settings.https) {
     logger.error("Insufficient configuration for https");
     return;
   }
-
   const secureServer = https.createServer(options, requestHandler);
   secureServer.listen(settings.securePort, function () {
     logger.info('https server listening on port', settings.securePort);
