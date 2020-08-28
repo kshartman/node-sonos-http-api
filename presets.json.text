@@ -1,0 +1,41 @@
+var middleglenPresetAliases = [];
+
+var lakehousePresetAliases = [
+    {"name": "ambient_radio", "alias": ["ambient radio", "ambient", "ambient music"]},
+    {"name": "an_african_night", "alias": ["an african night", "africa", "african night"]},
+    {"name": "archaic_beats", "alias": ["archaic beats", "archaic beat", "ancient beat", "ancient beats"]},
+    {"name": "blues_acoustic", "alias": ["acoustic blues", "blues acoustic"]},
+    {"name": "blues_chicago", "alias": ["chicago blues", "classic blues", "blues chicago"]},
+    {"name": "blues_electric", "alias": ["electric blues", "blues electric"]},
+    {"name": "blues_radio", "alias": ["blues", "blues radio", "blues music"]},
+    {"name": "blues_uk_radio", "alias": ["blues uk", "blues uk radio"]},
+    {"name": "boot_liquor", "alias": ["boot liquor", "shit kicker music", "boot liquor radio", "country music", "country", "shit kicker"]},
+    {"name": "classical_baroque", "alias": ["baroque", "baroque classical", "classical baroque", "baroque music"]},
+    {"name": "classical_guitar", "alias": ["classical guitar", "classical guitar music"]},
+    {"name": "classical_quiet", "alias": ["classical quiet", "quiet classical music", "quiet classical"]},
+    {"name": "classical_radio", "alias": ["classical radio", "classical", "classical 101", "classical music", "wrr"]},
+    {"name": "crickets_summer_night", "alias": ["crickets summer night", "crickets", "summer crickets"]},
+    {"name": "electronic_radio", "alias": ["electronic radio", "electronic", "electronic music"]},
+    {"name": "gangsta_rap_radio", "alias": ["gangsta rap", "gangster radio", "gangsta radio", "gangsta", "gangster", "gangsta rap radio"]},
+    {"name": "hearts_of_space", "alias": ["hearts of space", "hos"]},
+    {"name": "jazz_radio", "alias": ["jazz radio", "jazz music", "jazz"]},
+    {"name": "jazz_smooth", "alias": ["smooth jazz", "quiet jazz", "jazz smooth"]},
+    {"name": "kera", "alias": ["kera", "public radio", "kera radio", "npr", "npr radio", "pbs"]},
+    {"name": "middle_eastern", "alias": ["middle eastern", "middle eastern music"]},
+    {"name": "ocean_sounds", "alias": ["ocean sounds", "ocean surf"]},
+    {"name": "ocean_waves", "alias": ["ocean waves"]},
+    {"name": "reggae_music", "alias": ["reggae music"]},
+    {"name": "reggae_radio", "alias": ["reggae radio", "reggae"]},
+    {"name": "reggae_roots", "alias": ["roots reggae", "reggae roots music", "roots reggae music", "reggae roots"]},
+    {"name": "rock_classic", "alias": ["classic rock", "classic rock music"]},
+    {"name": "rock_radio", "alias": ["rock radio", "rock", "rock music"]},
+    {"name": "sahara_sunset_radio", "alias": ["sahara sunset", "sahara sunset radio"]},
+    {"name": "secret_agent", "alias": ["secret agent", "spy music radio", "secret agent radio", "spy music", "music for spys"]},
+    {"name": "this_weeks_show", "alias": ["this weeks show", "this week's show"]},
+    {"name": "thundering_rainstorm", "alias": ["thundering rainstorm", "thunder storm", "thunderstorm", "rain", "thunder"]},
+    {"name": "toad_trills_and_thunder", "alias": ["toad trills and thunder", "thunder toads", "thunder tongues", "thunder tones", "frogs", "toads"]}
+];
+
+/*
+[{"name":"ambient_radio","alias":["ambient radio","ambient","ambient music"]},{"name":"an_african_night","alias":["an african night","africa","african night"]},{"name":"archaic_beats","alias":["archaic beats","archaic beat","ancient beat","ancient beats"]},{"name":"blues_acoustic","alias":["acoustic blues","blues acoustic"]},{"name":"blues_chicago","alias":["chicago blues","classic blues","blues chicago"]},{"name":"blues_electric","alias":["electric blues","blues electric"]},{"name":"blues_radio","alias":["blues","blues radio","blues music"]},{"name":"blues_uk_radio","alias":["blues uk","blues uk radio"]},{"name":"boot_liquor","alias":["boot liquor","shit kicker music","boot liquor radio","country music","country","shit kicker"]},{"name":"classical_baroque","alias":["baroque","baroque classical","classical baroque","baroque music"]},{"name":"classical_guitar","alias":["classical guitar","classical guitar music"]},{"name":"classical_quiet","alias":["classical quiet","quiet classical music","quiet classical"]},{"name":"classical_radio","alias":["classical radio","classical","classical 101","classical music","wrr"]},{"name":"crickets_summer_night","alias":["crickets summer night","crickets","summer crickets"]},{"name":"electronic_radio","alias":["electronic radio","electronic","electronic music"]},{"name":"gangsta_rap_radio","alias":["gangsta rap","gangster radio","gangsta radio","gangsta","gangster","gangsta rap radio"]},{"name":"hearts_of_space","alias":["hearts of space","hos"]},{"name":"jazz_radio","alias":["jazz radio","jazz music","jazz"]},{"name":"jazz_smooth","alias":["smooth jazz","quiet jazz","jazz smooth"]},{"name":"kera","alias":["kera","public radio","kera radio","npr","npr radio","pbs"]},{"name":"middle_eastern","alias":["middle eastern","middle eastern music"]},{"name":"ocean_sounds","alias":["ocean sounds","ocean surf"]},{"name":"ocean_waves","alias":["ocean waves"]},{"name":"reggae_music","alias":["reggae music"]},{"name":"reggae_radio","alias":["reggae radio","reggae"]},{"name":"reggae_roots","alias":["roots reggae","reggae roots music","roots reggae music","reggae roots"]},{"name":"rock_classic","alias":["classic rock","classic rock music"]},{"name":"rock_radio","alias":["rock radio","rock","rock music"]},{"name":"sahara_sunset_radio","alias":["sahara sunset","sahara sunset radio"]},{"name":"secret_agent","alias":["secret agent","spy music radio","secret agent radio","spy music","music for spys"]},{"name":"this_weeks_show","alias":["this weeks show", "this week's show"]},{"name":"thundering_rainstorm","alias":["thundering rainstorm","thunder storm","thunderstorm","rain","thunder"]},{"name":"toad_trills_and_thunder","alias":["toad trills and thunder","thunder toads","thunder tongues","thunder tones","frogs","toads"]}]
+*/

@@ -1,5 +1,10 @@
 [![PayPal donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/jishi "Donate once-off to this project using Paypal") [![Join the chat at gitter](https://img.shields.io/gitter/room/badges/shields.svg)](https://gitter.im/node-sonos-http-api/Lobby "Need assistance? Join the chat at Gitter.im") 
 
+⚠WARNING!⚠
+
+The upcoming Sonos software update (dubbed S2) will most likely break this API. If you rely on it, and want to continue use it, I would hold of upgrading to S2 right now until we know more.
+
+
 Feel free to use it as you please. Consider donating if you want to support further development. Reach out on the gitter chat if you have issues getting it to run, instead of creating new issues, thank you!
 
 If you are also looking for cloud control (ifttt, public webhooks etc), see the [bronos-client](http://www.bronos.net) project! That pi image also contains an installation of this http-api.  
@@ -293,6 +298,8 @@ Example content:
       "volume": 15
     }
   ],
+  "trackNo": 3,
+  "elapsedTime": 42,
   "playMode": {
     "shuffle": true,
     "repeat": "all",
@@ -318,6 +325,7 @@ Available options are:
 * auth: require basic auth credentials which requires a username and password
 * announceVolume: the percentual volume use when invoking say/sayall without any volume parameter
 * presetDir: absolute path to look for presets (folder must exist!)
+* household: when theres multiple sonos accounts on one network (example: Sonos_ab7d67898dcc5a6d, find it in [Your sonos IP]:1400/status/zp)
 
 
 Example:
