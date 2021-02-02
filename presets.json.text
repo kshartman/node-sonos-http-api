@@ -1,3 +1,5 @@
+// -*- Mode: JavaScript -*-
+
 var middleglenPresetAliases = [];
 
 var lakehousePresetAliases = [
