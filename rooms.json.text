@@ -1,67 +1,41 @@
-var middleglenRoomAliases = [ { "name": 'shanesoffice',
-                            alias:
-                            [ 'shane\'s office',
-                              'my office',
-                              'myoffice',
-                              'shanes office',
-                              'his office',
-                              'shines office',
-                              'shinesoffice',
-                              'shine\'s office' ] },
-                          { "name": 'kathysoffice',
-                            alias:
-                            [ 'kathys office',
-                              'kathy\'s office',
-                              'cathys office',
-                              'cathy\'s office',
-                              'cathysoffice',
-                              'her office' ] },
-                          { "name": 'livingroom', alias: [ 'living room', 'den' ] },
-                          { "name": 'patio', alias: [ 'pool', 'backyard', 'back yard' ] },
-                          { "name": 'kitchen' },
-                          { "name": 'diningroom', alias: ['dining room'] },
-                          { "name": 'mediaroom', alias: ['media room'] },
-                          { "name": 'sunroom',
-                            alias: [ 'sun room', 'pool room', 'poolroom' ] },
-                          { "name": 'livingroom', alias: [ 'living room', 'den' ] },
-                          { "name": 'bedroom', alias: [ 'master', 'master bedroom', 'our bedroom' ] } ];
+// -*- Mode: JavaScript -*-
+
+var middleglenRoomAliases = [
+    { "name": 'shanes_office_speakers',
+      alias:
+      [ 'shanes office speakers',
+        'shane\'s office',
+        'shanes office',
+        'shines office',
+        'shine\'s office',
+        'my office',
+        'his office'
+      ] },
+    { "name": 'kathys_office_speakers',
+      alias:
+      [ 'kathys office speakers',
+        'kathys office',
+        'kathy\'s office',
+        'cathys office',
+        'cathy\'s office',
+        'her office' ] },
+    { "name": 'living_room_speakers',
+      alias: [ 'living room speakers', 'livingroom', 'living room', 'den' ] },
+    { "name": 'patio_speakers',
+      alias: [ 'patio speakers', 'patio', 'pool', 'backyard', 'back yard' ] },
+    { "name": 'kitchen_speakers',
+      alias: ["kitchen speakers", "kitchen" ] },
+    { "name": 'dining_room_speakers',
+      alias: ['dining room speakers', 'diningroom', 'dining room'] },
+    { "name": 'media_room_speakers',
+      alias: ['media room speakers', 'mediaroom', 'media room'] },
+    { "name": 'sun_room_speakers',
+      alias: [ 'sun room', 'pool room', 'sunroom', 'poolroom', 'sun room speakers' ] },
+    { "name": 'bedroom_speakers', alias: [ 'bedroom', 'bed room', 'bed room speakers', 'master', 'master bedroom', 'our bedroom' ] } ];
 
 
 /*
-[{"name":"shanesoffice","alias":["shane's office","my office","myoffice","shanes office","his office","shines office","shinesoffice","shine's office"]},{"name":"kathysoffice","alias":["kathys office","kathy's office","cathys office","cathy's office","cathysoffice","her office"]},{"name":"livingroom","alias":["living room","den"]},{"name":"patio","alias":["pool","backyard","back yard"]},{"name":"kitchen"},{"name":"diningroom","alias":["dining room"]},{"name":"mediaroom","alias":["media room"]},{"name":"sunroom","alias":["sun room","pool room","poolroom"]},{"name":"livingroom","alias":["living room","den"]},{"name":"bedroom","alias":["master","master bedroom", "our bedroom"]}]
-*/
-
-var middleglenRoomAliases = [ { "name": "shanesoffice",
-                            alias:
-                            [ "shane\"s office",
-                              "my office",
-                              "myoffice",
-                              "shanes office",
-                              "his office",
-                              "shines office",
-                              "shinesoffice",
-                              "shine\"s office" ] },
-                          { "name": "kathysoffice",
-                            alias:
-                            [ "kathys office",
-                              "kathy\"s office",
-                              "cathys office",
-                              "cathy\"s office",
-                              "cathysoffice",
-                              "her office" ] },
-                          { "name": "livingroom", alias: [ "living room", "den" ] },
-                          { "name": "patio", alias: [ "pool", "backyard", "back yard" ] },
-                          { "name": "kitchen" },
-                          { "name": "diningroom", alias: ["dining room"] },
-                          { "name": "mediaroom", alias: ["media room"] },
-                          { "name": "sunroom",
-                            alias: [ "sun room", "pool room", "poolroom" ] },
-                          { "name": "livingroom", alias: [ "living room", "den" ] },
-                          { "name": "bedroom", alias: [ "master", "master bedroom", "our bedroom" ] } ];
-
-
-/*
-[{"name":"shanesoffice","alias":["shane"s office","my office","myoffice","shanes office","his office","shines office","shinesoffice","shine"s office"]},{"name":"kathysoffice","alias":["kathys office","kathy"s office","cathys office","cathy"s office","cathysoffice","her office"]},{"name":"livingroom","alias":["living room","den"]},{"name":"patio","alias":["pool","backyard","back yard"]},{"name":"kitchen"},{"name":"diningroom","alias":["dining room"]},{"name":"mediaroom","alias":["media room"]},{"name":"sunroom","alias":["sun room","pool room","poolroom"]},{"name":"livingroom","alias":["living room","den"]},{"name":"bedroom","alias":["master","master bedroom", "our bedroom"]}]
+[{"name":'shanes_office_speakers', alias: ['shanes office speakers','shane\'s office','shanes office','shines office','shine\'s office','my office','his office' ]}, {"name":'kathys_office_speakers', alias: ['kathys office speakers','kathys office','kathy\'s office','cathys office','cathy\'s office','her office' ]}, {"name":'living_room_speakers', alias: ['living room speakers','livingroom','living room','den' ]}, {"name":'patio_speakers', alias: ['patio speakers','patio','pool','backyard','back yard' ]}, {"name":'kitchen_speakers', alias: ["kitchen speakers","kitchen" ]}, {"name":'dining_room_speakers', alias: ['dining room speakers','diningroom','dining room']}, {"name":'media_room_speakers', alias: ['media room speakers','mediaroom','media room']}, {"name":'sun_room_speakers', alias: ['sun room','pool room','sunroom','poolroom','sun room speakers']}, {"name":'bedroom_speakers', alias: ['bedroom','bed room','bed room speakers','master','master bedroom','our bedroom']}]; 
 */
 
 var lakehouseRoomAliases = [
