@@ -90,6 +90,8 @@ server.listen(settings.port, host, function () {
   logger.info('http server listening on', host, 'port', settings.port);
 });
 
+logger.info("debug===" + settings.debug);
+
 server.on('error', (err) => {
   if (err.code && err.code === 'EADDRINUSE') {
     logger.error(`Port ${settings.port} seems to be in use already. Make sure the sonos-http-api isn't 
