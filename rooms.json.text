@@ -39,16 +39,14 @@ var middleglenRoomAliases = [
 */
 
 var lakehouseRoomAliases = [
-    { "name": "office_speakers", "alias": [ "office" ]},
-    { "name": "front_room_speakers", "alias": [ "front room", "frontroom", "front room speakers" ]},
-    { "name": "porch_speakers", "alias": [ "porch" ]},
-    { "name": "patio_speakers", "alias": [ "downstairs", "patio" ] },
-    { "name": "bedroom_speakers", "alias": [ "bedroom" ] },
-    { "name": "great_room_speakers", "alias": [ "great room", "greatroom", "den", "living room", "livingroom", "upstairs", "great room speakers" ] },
-    { "name": "spa_speakers", "alias": [ "spa" ]},
-    { "name": "dock_speakers", "alias": [ "dock" ]}];
+    { "name": "OfficeSpeakers", "alias": [ "Office Speakers", "Office", "My Office", "Shane\'s Office"]},
+    { "name": "PorchSpeakers", "alias": [ "Porch Speakers", "Porch" ]},
+    { "name": "PatioSpeakers", "alias": [ "Patio Speakers", "Downstairs", "Patio" ] },
+    { "name": "BedroomSpeakers", "alias": [ "Bedroom Speakers", "Bedroom" ] },
+    { "name": "GreatRoomSpeakers", "alias": [ "Great Room Speakers", "Great Room", "Greatroom", "Den", "Living Room", "Livingroom", "Upstairs" ] },
+    { "name": "FrontRoomSpeakers", "alias": [ "FrontRoom Speakers", "Front Room", "Frontroom" ] },    
+    { "name": "SpaSpeakers", "alias": [ "Spa Speakers", "Spa" "Hot Tub"]},
+    { "name": "DockSpeakers", "alias": [ "Dock Speakers", "Dock" ]}
+];
 
-/*
-[{"name":"office_speakers","alias":["office"]},{"name":"porch_speakers","alias":["porch"]},{ "name":"patio_speakers","alias":["downstairs","patio"]},{ "name":"front_room_speakers","alias":["front room","frontroom", "front room speakers"]},{ "name":"bedroom_speakers","alias":["bedroom"]},{ "name":"great_room_speakers","alias":["great room","greatroom","den","living room","livingroom","upstairs", "great room speakers"]},{"name":"spa_speakers","alias":["spa"]},{"name":"dock_speakers","alias":["dock"]}]
-*/
-
+/*[{ "name": "OfficeSpeakers", "alias": [ "Office Speakers", "Office", "My Office", "Shane\'s Office"]},{ "name": "PorchSpeakers", "alias": [ "Porch Speakers", "Porch" ]},{ "name": "PatioSpeakers", "alias": [ "Patio Speakers", "Downstairs", "Patio" ] },{ "name": "BedroomSpeakers", "alias": [ "Bedroom Speakers", "Bedroom" ] },{ "name": "GreatRoomSpeakers", "alias": [ "Great Room Speakers", "Great Room", "Greatroom", "Den", "Living Room", "Livingroom", "Upstairs" ] },{ "name": "FrontRoomSpeakers", "alias": [ "FrontRoom Speakers", "Front Room", "Frontroom" ] },{ "name": "SpaSpeakers", "alias": [ "Spa Speakers", "Spa" "Hot Tub"]},{ "name": "DockSpeakers", "alias": [ "Dock Speakers", "Dock" ]}]*/

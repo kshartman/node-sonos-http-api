@@ -29,6 +29,8 @@ const settingsFileFullPath = path.resolve(__dirname, 'settings.json');
 const userSettings = tryLoadJson(settingsFileFullPath);
 merge(settings, userSettings);
 
+settings.debug = !!process.env.SONOS_DEBUG;
+
 logger.debug(settings);
 
 if (!fs.existsSync(settings.webroot + '/tts/')) {
