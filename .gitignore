@@ -29,3 +29,6 @@ obj/
 .DS_Store
 yarn.lock
 npm-debug.log
+
+# Other junk
+.bash_history
