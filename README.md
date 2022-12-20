@@ -108,7 +108,7 @@ The actions supported as of today:
 * sub (on/off/gain/crossover/polarity) See SUB section for more info
 * nightmode (on/off/toggle, PLAYBAR only)
 * speechenhancement (on/off/toggle, PLAYBAR only)
-* bass/treble (use -10 thru 10 as value. 0 is neutral)
+* bass/treble (use -10 through to 10 as the value. 0 is neutral)
 
 
 State
@@ -786,7 +786,9 @@ Switch "placement adjustment" or more commonly known as phase. 0 = 0Â°, 1 = 180Â
 Spotify, Apple Music and Amazon Music (Experimental)
 ----------------------
 
-Allows you to perform your own external searches for Apple Music or Spotify songs or albums and play a specified song or track ID. The Music Search funtionality outlined further below performs a search of its own and plays the specified music.
+Allows you to perform your own external searches for Spotify, Apple Music or Amazon Music songs or albums and play a specified song or track ID. The Music Search funtionality outlined further below performs a search of its own and plays the specified music.
+
+Ensure you have added and registered the respective service with your Sonos account, before trying to control your speakers with node-sonos-http-api. Instructions on how to do this can be found here: https://support.sonos.com/s/article/2757?language=en_US
 
 The following endpoints are available:
 
@@ -851,8 +853,10 @@ The format is: https://music.amazon.de/albums/{albumID}?trackAsin={songID}&ref=d
 The format is: https://music.amazon.de/albums/{albumID}?ref=dm_sh_97aa-255b-dmcp-c6ba-4ff00&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
 > eg: https://music.amazon.de/albums/B0727SH7LW?ref=dm_sh_97aa-255b-dmcp-c6ba-4ff00&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
 
-BBC Sounds
+BBC Sounds (as of 2022 only available in the UK)
 ----------------------
+Ensure you have added and registered the BBC Sounds service with your Sonos account, before trying to control your speakers with node-sonos-http-api. Instructions on how to do this can be found here: https://www.bbc.co.uk/sounds/help/questions/listening-on-a-smart-speaker/sonos or here: https://support.sonos.com/s/article/2757?language=en_US
+
 You can specify a BBC station and the station will be played or set depending on the command used.
 
 To play immediately:
@@ -874,7 +878,8 @@ Refer to the table below for available codes for BBC Radio Stations
 |  BBC 1Relax                      | bbc_1relax                       |
 |  BBC Radio 2                     | bbc_radio_two                    |
 |  BBC Radio 3                     | bbc_radio_three                  |
-|  BBC Radio 4                     | bbc_radio_four                   |
+|  BBC Radio 4 FM                  | bbc_radio_fourfm                 |
+|  BBC Radio 4 LW                  | bbc_radio_fourlw                 |
 |  BBC Radio 4 Extra               | bbc_radio_four_extra             |
 |  BBC Radio 5 Live                | bbc_radio_five_live              |
 |  BBC Radio 5 Live Sports Extra   | bbc_five_live_sports_extra       |
