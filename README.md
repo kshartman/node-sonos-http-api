@@ -108,7 +108,7 @@ The actions supported as of today:
 * sub (on/off/gain/crossover/polarity) See SUB section for more info
 * nightmode (on/off/toggle, PLAYBAR only)
 * speechenhancement (on/off/toggle, PLAYBAR only)
-* bass/treble (use -10 thru 10 as value. 0 is neutral)
+* bass/treble (use -10 through to 10 as the value. 0 is neutral)
 
 
 State
@@ -786,7 +786,9 @@ Switch "placement adjustment" or more commonly known as phase. 0 = 0Â°, 1 = 180Â
 Spotify, Apple Music and Amazon Music (Experimental)
 ----------------------
 
-Allows you to perform your own external searches for Apple Music or Spotify songs or albums and play a specified song or track ID. The Music Search funtionality outlined further below performs a search of its own and plays the specified music.
+Allows you to perform your own external searches for Spotify, Apple Music or Amazon Music songs or albums and play a specified song or track ID. The Music Search funtionality outlined further below performs a search of its own and plays the specified music.
+
+Ensure you have added and registered the respective service with your Sonos account, before trying to control your speakers with node-sonos-http-api. Instructions on how to do this can be found here: https://support.sonos.com/s/article/2757?language=en_US
 
 The following endpoints are available:
 
@@ -851,8 +853,10 @@ The format is: https://music.amazon.de/albums/{albumID}?trackAsin={songID}&ref=d
 The format is: https://music.amazon.de/albums/{albumID}?ref=dm_sh_97aa-255b-dmcp-c6ba-4ff00&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
 > eg: https://music.amazon.de/albums/B0727SH7LW?ref=dm_sh_97aa-255b-dmcp-c6ba-4ff00&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
 
-BBC Sounds
+BBC Sounds (as of 2022 only available in the UK)
 ----------------------
+Ensure you have added and registered the BBC Sounds service with your Sonos account, before trying to control your speakers with node-sonos-http-api. Instructions on how to do this can be found here: https://www.bbc.co.uk/sounds/help/questions/listening-on-a-smart-speaker/sonos or here: https://support.sonos.com/s/article/2757?language=en_US
+
 You can specify a BBC station and the station will be played or set depending on the command used.
 
 To play immediately:
@@ -870,11 +874,12 @@ Refer to the table below for available codes for BBC Radio Stations
 |----------------------------------|----------------------------------|
 |  BBC Radio 1                     | bbc_radio_one                    |
 |  BBC 1Xtra                       | bbc_1xtra                        |
-|  BBC 1Dance                      | bbc_1dance                       |
-|  BBC 1Relax                      | bbc_1relax                       |
+|  BBC 1Dance                      | bbc_radio_one_dance              |
+|  BBC 1Relax                      | bbc_radio_one_relax              |
 |  BBC Radio 2                     | bbc_radio_two                    |
 |  BBC Radio 3                     | bbc_radio_three                  |
-|  BBC Radio 4                     | bbc_radio_four                   |
+|  BBC Radio 4 FM                  | bbc_radio_fourfm                 |
+|  BBC Radio 4 LW                  | bbc_radio_fourlw                 |
 |  BBC Radio 4 Extra               | bbc_radio_four_extra             |
 |  BBC Radio 5 Live                | bbc_radio_five_live              |
 |  BBC Radio 5 Live Sports Extra   | bbc_five_live_sports_extra       |
@@ -912,6 +917,7 @@ Refer to the table below for available codes for BBC Radio Stations
 |  BBC Radio Nottingham            | bbc_radio_nottingham             |
 |  BBC Radio Oxford                | bbc_radio_oxford                 |
 |  BBC Radio Scotland FM           | bbc_radio_scotland_fm            |
+|  BBC Radio Scotland Extra        | bbc_radio_scotland_mw            | 
 |  BBC Radio Sheffield             | bbc_radio_sheffield              |
 |  BBC Radio Shropshire            | bbc_radio_shropshire             |
 |  BBC Radio Solent                | bbc_radio_solent                 |
@@ -924,6 +930,7 @@ Refer to the table below for available codes for BBC Radio Stations
 |  BBC Radio Three Counties Radio  | bbc_three_counties_radio         |
 |  BBC Radio Ulster                | bbc_radio_ulster                 |
 |  BBC Radio Wales                 | bbc_radio_wales_fm               |
+|  BBC Radio Wales Extra           | bbc_radio_wales_am               |
 |  BBC Radio Wiltshire             | bbc_radio_wiltshire              |
 |  BBC Radio WM                    | bbc_wm                           |
 |  BBC Radio York                  | bbc_radio_york                   |
@@ -1093,6 +1100,31 @@ or
 
 "data" property will be equal to the same data as you would get from /RoomName/state or /zones. There is an example endpoint in the root if this project called test_endpoint.js which you may fire up to get an understanding of what is posted, just invoke it with "node test_endpoint.js" in a terminal, and then start the http-api in another terminal.
 
+
+Server Sent Events
+-----
+
+As an alternative to the web hook you can also call the `/events` endpoint to receive every state change and topology change as [Server Sent Event](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events).
+Compared to the web hook there is no configuration required on the server, and you can listen for events from multiple clients.
+
+Because it is a long-polling connection, you must take care of errors in your client code and re-connect if necessary.
+
+The server sends events formatted as single-line JSON in the format of Server Sent Events: every event starts with the string `data: `, followed by the single-line JSON formatted event, and is terminated by two new line characters.
+
+There are [several client libraries available](https://en.wikipedia.org/wiki/Server-sent_events#Libraries) to listen for Server Sent Events.
+Using `curl` yields the following output for some volume changes:
+
+```shell
+host:~ user$ curl localhost:5005/events
+data: {"type":"volume-change","data":{"uuid":"RINCON_E2832F58D9074C45B","previousVolume":13,"newVolume":19,"roomName":"Office"}}
+
+data: {"type":"volume-change","data":{"uuid":"RINCON_E2832F58D9074C45B","previousVolume":19,"newVolume":25,"roomName":"Office"}}
+
+data: {"type":"volume-change","data":{"uuid":"RINCON_E2832F58D9074C45B","previousVolume":25,"newVolume":24,"roomName":"Office"}}
+
+data: {"type":"volume-change","data":{"uuid":"RINCON_E2832F58D9074C45B","previousVolume":23,"newVolume":23,"roomName":"Office"}}
+
+```
 
 DOCKER
 -----
