@@ -1,0 +1,21 @@
+version: '2'
+services:
+  node:
+    build: .
+    container_name: sonosd
+    image: sonosd
+    network_mode: "host"
+    command: npm run start
+    volumes:
+      - /usr/app/
+      - /usr/app/lib
+      - /usr/app/node_modules
+      - /usr/app/cache
+      - /usr/app/presets
+      - /usr/app/static
+    restart: on-failure
+    ports:
+      - 5005:5005
+
+
+
