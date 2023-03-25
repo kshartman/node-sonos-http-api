@@ -9,7 +9,7 @@ version=`npm run version --silent`
 echo $version > VERSION
 echo "version: $version"
 # run build
-docker-compose build
+docker compose build
 # tag it
 git add -A
 git commit -m "version $version"
