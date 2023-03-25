@@ -14,8 +14,6 @@ services:
       - /usr/app/presets
       - /usr/app/static
     restart: on-failure
-    ports:
-      - 5005:5005
 
 
 
