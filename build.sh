@@ -15,6 +15,26 @@ else
     exit 1
 fi
 
+    cp ../private/settings-${BUILDFOR}.json settings.json
+    rm settings-${BUILDFOR}.json
+    ln -s ../private/settings-${BUILDFOR}.json .
+
+if [ -d ../sonosd-presets/presets-${BUILDFOR} ]; then
+    if [ -L ./presets ]; then
+        rm ./presets 
+    elif [ -d ./presets ]; then
+        rm -rf ./presets
+    elif [ -f ./presets ]; then
+        rm ./presets
+    fi
+    mkdir ./presets
+    (cd ../sonosd-presets/presets-${BUILDFOR} && tar cf - .) | (cd ./presets && tar xfv -)
+ else
+    echo error: no such settings ../sonosd-settings/settings-${BUILDFOR}.json
+    exit 1
+fi
+
+
 # image name
 IMAGE=sonosd
 # ensure we're up to date
