@@ -45,3 +45,4 @@ presets.json.text
 rooms.json.txt
 test_endpoint.js
 cache/*
+settings-*.gpg
