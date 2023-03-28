@@ -20,6 +20,8 @@ foo*
 #--- app files
 .git
 .git/**/*
+.github
+.github/**/*
 *.log
 logs
 logs/**/*
