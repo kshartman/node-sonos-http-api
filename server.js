@@ -14,10 +14,9 @@ const discovery = new SonosSystem(settings);
 const api = new SonosHttpAPI(discovery, settings);
 
 var requestHandler = function (req, res) {
+  logger.info(`request: ${req.url}`);
   req.addListener('end', function () {
     fileServer.serve(req, res, function (err) {
-
-      if (settings.debug) console.log("request url - " + req.url);
       // If error, route it.
       // This bypasses authentication on static files!
       if (!err) {
