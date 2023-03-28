@@ -18,7 +18,7 @@
     "anesidora": "^1.2.0",
     "aws-sdk": "^2.946.0",
     "basic-auth": "~1.1.0",
-    "fuse.js": "^2.5.0",
+    "fuse.js": "^6.6.2",
     "html-entities": "^1.3.1",
     "js-yaml": "^3.14.0",
     "json5": "^2.2.3",
