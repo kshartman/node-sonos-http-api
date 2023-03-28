@@ -36,6 +36,7 @@ README.md
 npm-debug.log
 build.sh
 run.sh
+update.sh
 Dockerfile
 Dockerfile*
 docker-compose.yml
