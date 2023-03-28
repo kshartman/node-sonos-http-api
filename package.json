@@ -1,10 +1,11 @@
 {
   "name": "sonos-http-api",
-  "version": "1.6.12",
+  "version": "1.6.13",
   "description": "A simple node app for controlling a Sonos system with basic HTTP requests",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint lib",
+    "debug": "DEBUG=1 SONOS_DEBUG=1 NODE_LOG_LEVEL=debug NODE_ENV=development node server.js",
     "version": "echo $npm_package_version"
   },
   "author": "Jimmy Shimizu <jimmy@shimizu.se>",
