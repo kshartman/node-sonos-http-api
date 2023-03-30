@@ -45,9 +45,9 @@ oldversion=$(cat VERSION 2> /dev/null)
 echo $version > VERSION
 echo "version: $version"
 # run build
-docker compose build
+docker-compose build
 # tag it
-if [[ "${version}" != "${oldversion}" )); then
+if [[ "${version}" != "${oldversion}" ]]; then
     git add -A
     git commit -m "version $version"
     git tag -a "$version" -m "version $version"
