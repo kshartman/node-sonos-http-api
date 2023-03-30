@@ -41,14 +41,17 @@ IMAGE=sonosd
 git pull
 # update the version file
 version=`npm run version --silent`
+oldversion=$(cat VERSION 2> /dev/null)
 echo $version > VERSION
 echo "version: $version"
 # run build
 docker compose build
 # tag it
-git add -A
-git commit -m "version $version"
-git tag -a "$version" -m "version $version"
-git push
-git push --tags
+if [[ "${version}" != "${oldversion}" )); then
+    git add -A
+    git commit -m "version $version"
+    git tag -a "$version" -m "version $version"
+    git push
+    git push --tags
+fi
 docker tag $IMAGE:latest $IMAGE:$version
