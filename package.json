@@ -16,7 +16,7 @@
   "dependencies": {
     "@brettz9/node-static": "^0.1.1",
     "anesidora": "^1.2.0",
-    "aws-sdk": "^2.1371.0",
+    "aws-sdk": "^2.1377.0",
     "basic-auth": "~1.1.0",
     "fuse.js": "^2.5.0",
     "html-entities": "^1.3.1",
