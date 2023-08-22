@@ -30,8 +30,8 @@
         "wav-file-info": "0.0.10"
     },
     "engines": {
-        "node": ">=14.0.0 <17.0.0",
-        "npm": ">=6.0.0 <10.0.0"
+        "node": ">=4.0.0 <17.0.0",
+        "npm": ">=2.0.0 <10.0.0"
     },
     "main": "lib/sonos-http-api.js",
     "license": "MIT",
