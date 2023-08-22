@@ -24,7 +24,7 @@
         "json5": "^2.2.3",
         "lodash": "^4.17.21",
         "mime": "^1.4.1",
-        "music-metadata": "^7.0.0",
+        "music-metadata": "^8.1.4",
         "request-promise": "^4.2.6",
         "sonos-discovery": "git://github.com/kshartman/node-sonos-discovery",
         "wav-file-info": "0.0.10"
