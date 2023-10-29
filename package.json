@@ -23,7 +23,7 @@
         "js-yaml": "^3.14.0",
         "json5": "^2.2.3",
         "lodash": "^4.17.20",
-        "mime": "^1.4.1",
+        "mime": "^3.0.0",
         "music-metadata": "^1.1.0",
         "request-promise": "^4.2.6",
         "sonos-discovery": "git://github.com/kshartman/node-sonos-discovery",
