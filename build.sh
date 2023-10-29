@@ -45,7 +45,7 @@ oldversion=$(cat VERSION 2> /dev/null)
 echo $version > VERSION
 echo "version: $version"
 # run build
-if [ "$(command -v docker-compose)" ]; then
+if command -v docker-compose &>/dev/null; then
     docker-compose build
 else
     docker compose build
