@@ -403,6 +403,7 @@ Experimental support for TTS. Today the following providers are available:
 * AWS Polly
 * Google (default)
 * macOS say command
+* Elevenlabs
 
 It will use the one you configure in settings.json. If you define settings for multiple TTS services, it will not be guaranteed which one it will choose!
 
@@ -531,7 +532,9 @@ You can also specify it for this application only, using:
 	}
 ```
 
-Choose the region where you registered your account, or the one closest to you. Polly is only supported in US East (Northern Virginia), US West (Oregon), US East (Ohio), and EU (Ireland) as of today (dec 2016)
+To select the neural engine, append `Neural` to the name, e.g. `DanielNeural`.
+
+Choose the region where you registered your account, or the one closest to you.
 
 If you have your credentials elsewhere and want to stick with the default voice, you still need to make sure that the aws config option is set to trigger AWS TTS:
 
@@ -607,6 +610,48 @@ To get a current list of voices, you would need to use the AWS CLI and invoke th
 | US Spanish | es-US | Male | Miguel |
 | Welsh | cy-GB | Female | Gwyneth |
 | Welsh English | en-GB-WLS | Male | Geraint |
+
+#### Elevenlabs
+
+Elevenlabs is a TTS service enabling generatiung TTS audio files using AI generated voices.
+
+Requires API Key and optionally default voiceId.
+
+Since Elevenlabs AI models are multilingual by default, there is no need (nor place) for `language` parameter in 
+Elevenlabs API. Because of this, `language` parameter in URL is used to inject custom `voiceId` on per-request basis. You will
+need to either configure default voiceId in `settings.json` or provide `voiceId` with every HTTP request.
+
+##### Config
+
+Minimal:
+```json
+	{
+	  "elevenlabs": {
+		"auth": {
+		  "apiKey": ""
+		}
+	  }
+	}
+```
+
+Full:
+```json
+	{
+	  "elevenlabs": {
+		"auth": {
+		  "apiKey": ""
+		},
+		"config": {
+		  "voiceId": "",
+		  "stability": 0.5,
+		  "similarityBoost": 0.5,
+		  "speakerBoost": true,
+		  "style": 1,
+		  "modelId": "eleven_multilingual_v2"
+		}
+	  }
+	}
+```
 
 #### Google (default if no other has been configured)
 
